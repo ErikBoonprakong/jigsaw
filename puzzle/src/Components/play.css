@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.puzzle-cell {
+  border: 1px solid black;
+  width: 6vw;
+  height: 6vw;
+  background-size: 100% 100%;
+}
+
+/* .cell1 {
+  background-color: aquamarine;
+}
+
+.cell2 {
+  background-color: aquamarine;
+}
+
+.cell3 {
+  background-color: aquamarine;
+}
+
+.cell4 {
+  background-color: aquamarine;
+}
+
+.cell5 {
+  background-color: aquamarine;
+}
+
+.cell6 {
+  background-color: aquamarine;
+}
+
+.cell7 {
+  background-color: aquamarine;
+}
+
+.cell8 {
+  background-color: aquamarine;
+}
+
+.cell9 {
+  background-color: red;
+}
+
+.cell10 {
+  background-color: aquamarine;
+}
+
+.cell11 {
+  background-color: aquamarine;
+}
+
+.cell12 {
+  background-color: aquamarine;
+}
+
+.cell13 {
+  background-color: aquamarine;
+}
+
+.cell14 {
+  background-color: aquamarine;
+}
+
+.cell15 {
+  background-color: aquamarine;
+} */
