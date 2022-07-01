@@ -25,6 +25,7 @@ class PlayGame extends React.Component {
         "14",
         "15",
       ],
+      arrowImg: "",
     };
   }
 
@@ -40,19 +41,7 @@ class PlayGame extends React.Component {
     this.setState({ contents: contentsState });
   };
 
-  initialiseInitialTable = () => {};
-
-  initialiseTable = (counter) => {
-    // for (let i = 0; i < this.state.contents.length - 1; i += 4) {
-    //   return (
-    //     <tr>
-    //       <td className="puzzleCell">{this.state.contents[i]}</td>
-    //       <td className="puzzleCell">{this.state.contents[i + 1]}</td>
-    //       <td className="puzzleCell">{this.state.contents[i + 2]}</td>
-    //       <td className="puzzleCell">{this.state.contents[i + 3]}</td>
-    //     </tr>
-    //   );
-    // }
+  initialiseTable = () => {
     return (
       <tbody className="puzzleTable">
         <tr>
@@ -70,7 +59,7 @@ class PlayGame extends React.Component {
             {this.state.contents[0]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[1]}`}
+            className={`puzzle-cell arrow-cell cell${this.state.contents[1]}`}
             style={{
               backgroundImage:
                 this.state.contents[1] !== " "
@@ -79,8 +68,17 @@ class PlayGame extends React.Component {
                     }.jpg)`
                   : "none",
             }}
+            // onMouseEnter={() => {
+            //   if (this.state.contents[1 + 1] === " ") {
+            //     this.setState({ arrowImg: "" });
+            //   }
+            // }}
+            // onMouseLeave={() => {
+            //   this.setState({ arrowImg: "" });
+            // }}
           >
             {this.state.contents[1]}
+            {/* <img src="arrowRight.png" className="arrow-overlay" /> */}
           </td>
           <td
             className={`puzzle-cell cell${this.state.contents[2]}`}
@@ -307,51 +305,53 @@ class PlayGame extends React.Component {
         this.setState({ winMsg: "" });
       }
     }
-    if (e.target.textContent === " ") {
-      this.setState({
-        contents: [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          " ",
-        ],
-      });
-    }
+
+    // UNCOMMENT CODE FOR QUICK SOLVE (CLICK BLANK SQUARE TO SOLVE)
+    // if (e.target.textContent === " ") {
+    //   this.setState({
+    //     contents: [
+    //       "1",
+    //       "2",
+    //       "3",
+    //       "4",
+    //       "5",
+    //       "6",
+    //       "7",
+    //       "8",
+    //       "9",
+    //       "10",
+    //       "11",
+    //       "12",
+    //       "13",
+    //       "14",
+    //       "15",
+    //       " ",
+    //     ],
+    //   });
+    // }
   };
 
   render() {
     return (
-      <div>
+      <div className="play-game-wrapper">
         <h1>Play Game</h1>
         <div>
-          <Link to="/home">
-            <h2>Back To Home Page</h2>
-          </Link>
-        </div>
-        <div>
-          <span>{this.state.winMsg}</span>
+          <span className="message">{this.state.winMsg}</span>
         </div>
         <br></br>
         <div>
           <table
             cellspacing="0"
             onClick={(e) => this.handleClick(e)}
-            className="puzzleTable"
+            className="puzzle-table"
           >
             {this.initialiseTable()}
           </table>
+        </div>
+        <div>
+          <Link to="/home">
+            <h2>Back To Home Page</h2>
+          </Link>
         </div>
       </div>
     );

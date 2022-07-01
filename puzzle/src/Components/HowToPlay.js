@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
+import "./how-to-play.css";
 
 class HowToPlay extends React.Component {
   constructor(props) {
@@ -8,9 +9,9 @@ class HowToPlay extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="how-to-play">
         <h1>How To Play</h1>
-        <p>
+        <p className="description">
           The aim of this game is to reorder the squares so that the photo is
           complete, with only the bottom-right square being blank. Click a
           square adjacent to a blank square to move it into the blank space.
