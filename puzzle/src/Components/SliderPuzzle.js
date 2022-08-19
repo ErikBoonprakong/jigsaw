@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import "./home.css";
 
-class Home extends React.Component {
+class SliderPuzzle extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -10,16 +10,16 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-navigation">
-        <h1>Pick A Game</h1>
-        <Link to="/sliderpuzzle">
-          <h3>Slider Puzzle</h3>
+        <h1>Slider Puzzle</h1>
+        <Link to="/howtoplay">
+          <h3>How To Play</h3>
         </Link>
-        {/* <Link to="/choosedifficulty">
+        <Link to="/choosedifficulty">
           <h3>Play Game</h3>
-        </Link> */}
+        </Link>
       </div>
     );
   }
 }
 
-export default Home;
+export default SliderPuzzle;

@@ -17,8 +17,8 @@ class HowToPlay extends React.Component {
           square adjacent to a blank square to move it into the blank space.
         </p>
         <div>
-          <Link to="/home">
-            <h2>Back To Home Page</h2>
+          <Link to="/sliderpuzzle">
+            <h2>Back</h2>
           </Link>
         </div>
       </div>

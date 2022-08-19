@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import "./play.css";
+import cookieObj from "./GetCookies";
+import Networking from "./Networking";
 
 class PlayGame extends React.Component {
   constructor(props) {
@@ -27,6 +29,7 @@ class PlayGame extends React.Component {
       ],
       arrowImg: "",
     };
+    this.Networking = new Networking();
   }
 
   componentDidMount = () => {
@@ -273,7 +276,7 @@ class PlayGame extends React.Component {
     );
   };
 
-  handleClick = (e) => {
+  handleClick = async (e) => {
     if (
       this.state.contents[
         (e.target.parentNode.rowIndex + 1) * 4 + (e.target.cellIndex + 1) - 4
@@ -301,47 +304,51 @@ class PlayGame extends React.Component {
         this.setState({
           winMsg: "Congratulations for solving the puzzle! Enjoy the view!",
         });
+        if (this.props.userData.user) {
+          // add 200 to score
+          await this.Networking.updateScore(this.props.userData.user_id, 200);
+          this.props.newCookie(cookieObj());
+        }
       } else {
         this.setState({ winMsg: "" });
       }
     }
+  };
 
-    // UNCOMMENT CODE FOR QUICK SOLVE (CLICK BLANK SQUARE TO SOLVE)
-    // if (e.target.textContent === " ") {
-    //   this.setState({
-    //     contents: [
-    //       "1",
-    //       "2",
-    //       "3",
-    //       "4",
-    //       "5",
-    //       "6",
-    //       "7",
-    //       "8",
-    //       "9",
-    //       "10",
-    //       "11",
-    //       "12",
-    //       "13",
-    //       "14",
-    //       "15",
-    //       " ",
-    //     ],
-    //   });
-    // }
+  iCantSolveThis = () => {
+    console.log(this.props.userData);
+    this.setState({
+      contents: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        " ",
+        "15",
+      ],
+    });
   };
 
   render() {
     return (
       <div className="play-game-wrapper">
-        <h1>Play Game</h1>
         <div>
           <span className="message">{this.state.winMsg}</span>
         </div>
         <br></br>
         <div>
           <table
-            cellspacing="0"
+            cellSpacing="0"
             onClick={(e) => this.handleClick(e)}
             className="puzzle-table"
           >
@@ -349,9 +356,14 @@ class PlayGame extends React.Component {
           </table>
         </div>
         <div>
-          <Link to="/home">
-            <h2>Back To Home Page</h2>
+          <Link to="/sliderpuzzle">
+            <h2>Back</h2>
           </Link>
+        </div>
+        <div>
+          <button onClick={() => this.iCantSolveThis()}>
+            I Can't Solve This And I Want To Cheat
+          </button>
         </div>
       </div>
     );

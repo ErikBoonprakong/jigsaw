@@ -13,6 +13,7 @@ body {
 h1 {
   font-size: 99px;
   color: lightgoldenrodyellow;
+  margin-top: 0;
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
@@ -26,6 +27,17 @@ a {
 
 a:hover {
   color: lightpink;
+}
+
+.big-link {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.small-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
 }
 
 code {
