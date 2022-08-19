@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import cookieObj from "./GetCookies";
-import "./home.css";
 import Networking from "./Networking";
 
 class LogIn extends React.Component {
@@ -52,29 +51,41 @@ class LogIn extends React.Component {
         ) : (
           <div>
             <h1>Log In</h1>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} className="register">
+              <label for="username" className="input-label white-text">
+                Username
+              </label>
               <input
                 type="text"
                 name="username"
                 id="username"
                 onChange={(e) => this.handleChange(e)}
+                className="input-field"
               />
+              <label for="password" className="input-label white-text">
+                Password
+              </label>
               <input
                 type={this.state.showPassword ? "text" : "password"}
                 name="password"
                 id="password"
                 onChange={(e) => this.handleChange(e)}
+                className="input-field"
               />
+              <label className="white-text" for="showPassword">
+                Show Password{"  "}
+                <input
+                  id="showPassword"
+                  type="checkbox"
+                  onChange={this.showPassword.bind(this)}
+                ></input>
+              </label>
               <br />
-              <br />
-              <label className="password-label">Show Password </label>
               <input
-                type="checkbox"
-                onChange={this.showPassword.bind(this)}
+                type="submit"
+                value="login"
+                className="input-field"
               ></input>
-              <br />
-              <input type="submit" value="login"></input>
-              <br />
               <h4>{this.state.error}</h4>
             </form>
           </div>

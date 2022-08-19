@@ -11,14 +11,48 @@ body {
 }
 
 h1 {
-  font-size: 99px;
+  font-size: 6em;
   color: lightgoldenrodyellow;
   margin-top: 0;
-  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  text-shadow: -0.02em 0 black, 0 0.02em black, 0.02em 0 black, 0 -0.02em black;
 }
 
-h3 {
-  font-size: 48px;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.614);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#title {
+  font-size: 4.3em;
+  color: rgb(132, 206, 249);
+  text-shadow: -0.05em 0 black, 0 0.05em black, 0.05em 0 black, 0 -0.05em black;
+  font-weight: 900;
+}
+
+#title:hover {
+  color: rgb(249, 132, 161);
+  text-shadow: -0.05em 0 white, 0 0.05em white, 0.05em 0 white, 0 -0.05em white;
+  font-weight: 900;
+}
+
+.header-side {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20vw;
+}
+
+.user-info {
+  color: lightpink;
+  text-shadow: -0.02em 0 black, 0 0.02em black, 0.02em 0 black, 0 -0.02em black;
+  font-size: 1.75em;
+  font-weight: 800;
 }
 
 a {
@@ -30,14 +64,89 @@ a:hover {
 }
 
 .big-link {
-  font-size: 48px;
+  font-size: 3em;
   font-weight: 700;
+  text-shadow: -0.01em 0 black, 0 0.01em black, 0.01em 0 black, 0 -0.01em black;
+}
+
+.little-link {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-shadow: -0.01em 0 black, 0 0.01em black, 0.01em 0 black, 0 -0.01em black;
 }
 
 .small-text {
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 500;
   color: white;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vh;
+}
+
+.input-label {
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5vh;
+}
+
+.white-text {
+  color: white;
+  text-shadow: -0.05em 0 black, 0 0.05em black, 0.05em 0 black, 0 -0.05em black;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  margin-bottom: 5vh;
+}
+
+.description-page {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-puzzle-table {
+  border: 0.075em solid white;
+}
+
+.slider-puzzle-cell {
+  border: 0.075em solid white;
+  width: 6vw;
+  height: 6vw;
+  background-size: 100% 100%;
+}
+
+.win-message {
+  color: gold;
+  text-shadow: -0.05em 0 black, 0 0.05em black, 0.05em 0 black, 0 -0.05em black;
+  font-size: 1.5em;
+  font-weight: 800;
 }
 
 code {

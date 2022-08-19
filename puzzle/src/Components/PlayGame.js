@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import "./play.css";
 import cookieObj from "./GetCookies";
 import Networking from "./Networking";
 
@@ -46,10 +45,10 @@ class PlayGame extends React.Component {
 
   initialiseTable = () => {
     return (
-      <tbody className="puzzleTable">
+      <tbody className="slider-puzzle-table">
         <tr>
           <td
-            className={`puzzle-cell cell${this.state.contents[0]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[0]}`}
             style={{
               backgroundImage:
                 this.state.contents[0] !== " "
@@ -62,7 +61,7 @@ class PlayGame extends React.Component {
             {this.state.contents[0]}
           </td>
           <td
-            className={`puzzle-cell arrow-cell cell${this.state.contents[1]}`}
+            className={`slider-puzzle-cell arrow-cell cell${this.state.contents[1]}`}
             style={{
               backgroundImage:
                 this.state.contents[1] !== " "
@@ -84,7 +83,7 @@ class PlayGame extends React.Component {
             {/* <img src="arrowRight.png" className="arrow-overlay" /> */}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[2]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[2]}`}
             style={{
               backgroundImage:
                 this.state.contents[2] !== " "
@@ -97,7 +96,7 @@ class PlayGame extends React.Component {
             {this.state.contents[2]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[3]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[3]}`}
             style={{
               backgroundImage:
                 this.state.contents[3] !== " "
@@ -112,7 +111,7 @@ class PlayGame extends React.Component {
         </tr>
         <tr>
           <td
-            className={`puzzle-cell cell${this.state.contents[4]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[4]}`}
             style={{
               backgroundImage:
                 this.state.contents[4] !== " "
@@ -125,7 +124,7 @@ class PlayGame extends React.Component {
             {this.state.contents[4]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[5]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[5]}`}
             style={{
               backgroundImage:
                 this.state.contents[5] !== " "
@@ -138,7 +137,7 @@ class PlayGame extends React.Component {
             {this.state.contents[5]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[6]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[6]}`}
             style={{
               backgroundImage:
                 this.state.contents[6] !== " "
@@ -151,7 +150,7 @@ class PlayGame extends React.Component {
             {this.state.contents[6]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[7]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[7]}`}
             style={{
               backgroundImage:
                 this.state.contents[7] !== " "
@@ -166,7 +165,7 @@ class PlayGame extends React.Component {
         </tr>
         <tr>
           <td
-            className={`puzzle-cell cell${this.state.contents[8]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[8]}`}
             style={{
               backgroundImage:
                 this.state.contents[8] !== " "
@@ -179,7 +178,7 @@ class PlayGame extends React.Component {
             {this.state.contents[8]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[9]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[9]}`}
             style={{
               backgroundImage:
                 this.state.contents[9] !== " "
@@ -192,7 +191,7 @@ class PlayGame extends React.Component {
             {this.state.contents[9]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[10]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[10]}`}
             style={{
               backgroundImage:
                 this.state.contents[10] !== " "
@@ -205,7 +204,7 @@ class PlayGame extends React.Component {
             {this.state.contents[10]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[11]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[11]}`}
             style={{
               backgroundImage:
                 this.state.contents[11] !== " "
@@ -220,7 +219,7 @@ class PlayGame extends React.Component {
         </tr>
         <tr>
           <td
-            className={`puzzle-cell cell${this.state.contents[12]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[12]}`}
             style={{
               backgroundImage:
                 this.state.contents[12] !== " "
@@ -233,7 +232,7 @@ class PlayGame extends React.Component {
             {this.state.contents[12]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[13]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[13]}`}
             style={{
               backgroundImage:
                 this.state.contents[13] !== " "
@@ -246,7 +245,7 @@ class PlayGame extends React.Component {
             {this.state.contents[13]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[14]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[14]}`}
             style={{
               backgroundImage:
                 this.state.contents[14] !== " "
@@ -259,7 +258,7 @@ class PlayGame extends React.Component {
             {this.state.contents[14]}
           </td>
           <td
-            className={`puzzle-cell cell${this.state.contents[15]}`}
+            className={`slider-puzzle-cell cell${this.state.contents[15]}`}
             style={{
               backgroundImage:
                 this.state.contents[15] !== " "
@@ -341,16 +340,16 @@ class PlayGame extends React.Component {
 
   render() {
     return (
-      <div className="play-game-wrapper">
+      <div className="game-body">
         <div>
-          <span className="message">{this.state.winMsg}</span>
+          <span className="win-message">{this.state.winMsg}</span>
         </div>
         <br></br>
         <div>
           <table
             cellSpacing="0"
             onClick={(e) => this.handleClick(e)}
-            className="puzzle-table"
+            className="slider-puzzle-table"
           >
             {this.initialiseTable()}
           </table>

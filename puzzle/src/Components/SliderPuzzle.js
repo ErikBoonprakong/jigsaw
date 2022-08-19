@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import "./home.css";
 
 class SliderPuzzle extends React.Component {
   constructor(props) {
@@ -11,12 +10,14 @@ class SliderPuzzle extends React.Component {
     return (
       <div className="home-navigation">
         <h1>Slider Puzzle</h1>
-        <Link to="/howtoplay">
-          <h3>How To Play</h3>
-        </Link>
-        <Link to="/choosedifficulty">
-          <h3>Play Game</h3>
-        </Link>
+        <div className="menu">
+          <Link to="/howtoplay" className="menu-item">
+            <span className="big-link">How To Play</span>
+          </Link>
+          <Link to="/choosedifficulty" className="menu-item">
+            <span className="big-link">Play Game</span>
+          </Link>
+        </div>
       </div>
     );
   }

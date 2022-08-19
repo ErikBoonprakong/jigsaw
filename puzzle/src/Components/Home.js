@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import "./home.css";
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,11 +11,8 @@ class Home extends React.Component {
       <div className="home-navigation">
         <h1>Pick A Game</h1>
         <Link to="/sliderpuzzle">
-          <h3>Slider Puzzle</h3>
+          <span className="big-link">Slider Puzzle</span>
         </Link>
-        {/* <Link to="/choosedifficulty">
-          <h3>Play Game</h3>
-        </Link> */}
       </div>
     );
   }

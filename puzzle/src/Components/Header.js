@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import "./home.css";
 import Networking from "./Networking";
 import cookieObj from "./GetCookies";
 
@@ -15,12 +14,12 @@ class Header extends React.Component {
     this.Networking = new Networking();
   }
 
-  loggedIn() {
+  isLoggedIn() {
     if (this.props.userData.user) {
       return (
-        <span className="rhs">
+        <span className="header-side white-text">
           You are signed in as: <br />
-          <span className="username">{this.props.userData.user}</span>
+          <span className="user-info">{this.props.userData.user}</span>
           <button
             onClick={async () => {
               await this.Networking.logOut();
@@ -33,7 +32,7 @@ class Header extends React.Component {
       );
     } else {
       return (
-        <span className="rhs">
+        <span className="header-side white-text">
           <Link to="/login">
             <button>Log In</button>
           </Link>
@@ -50,18 +49,20 @@ class Header extends React.Component {
       <>
         <div className="header">
           {this.props.userData.user ? (
-            <span className="rhs">
+            <span className="header-side white-text">
               You have: <br />{" "}
-              <span className="username">{this.props.userData.userScore}</span>
+              <span className="user-info">{this.props.userData.userScore}</span>
               Points
             </span>
           ) : (
-            <span className="rhs">Sign in to keep track of your score</span>
+            <span className="header-side white-text">
+              Sign in to keep track of your score
+            </span>
           )}
           <Link id="title" to="/home">
             Puzzle
           </Link>
-          <span>{this.loggedIn()}</span>
+          <span>{this.isLoggedIn()}</span>
         </div>
       </>
     );
