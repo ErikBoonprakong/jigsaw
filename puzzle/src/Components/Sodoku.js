@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 
-class SliderPuzzle extends React.Component {
+class Sodoku extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -9,12 +9,12 @@ class SliderPuzzle extends React.Component {
   render() {
     return (
       <div className="home-navigation">
-        <h1>Slider Puzzle</h1>
+        <h1>Sodoku</h1>
         <div className="menu">
-          <Link to="/howtoplay" className="menu-item">
+          <Link to="/howtosodoku" className="menu-item">
             <span className="big-link">How To Play</span>
           </Link>
-          <Link to="/choosedifficulty" className="menu-item">
+          <Link to="/playsodoku" className="menu-item">
             <span className="big-link">Play Game</span>
           </Link>
           <Link to="/home">
@@ -26,4 +26,4 @@ class SliderPuzzle extends React.Component {
   }
 }
 
-export default SliderPuzzle;
+export default Sodoku;

@@ -11,6 +11,9 @@ import CreateAccount from "./Components/CreateAccount";
 import Header from "./Components/Header";
 import cookieObj from "./Components/GetCookies";
 import SliderPuzzle from "./Components/SliderPuzzle";
+import HowToSodoku from "./Components/HowToSodoku";
+import Sodoku from "./Components/Sodoku";
+import PlaySodoku from "./Components/PlaySodoku";
 
 class App extends React.Component {
   constructor() {
@@ -42,11 +45,20 @@ class App extends React.Component {
             <Route path="/howtoplay">
               <HowToPlay />
             </Route>
+            <Route path="/howtosodoku">
+              <HowToSodoku />
+            </Route>
             <Route path="/choosedifficulty">
               <ChooseDifficulty />
             </Route>
             <Route path="/playgame">
               <PlayGame
+                userData={this.state.cookie}
+                newCookie={this.getCookie.bind(this)}
+              />
+            </Route>
+            <Route path="/playsodoku">
+              <PlaySodoku
                 userData={this.state.cookie}
                 newCookie={this.getCookie.bind(this)}
               />
@@ -59,6 +71,9 @@ class App extends React.Component {
             </Route>
             <Route path="/sliderpuzzle">
               <SliderPuzzle newCookie={this.getCookie.bind(this)} />
+            </Route>
+            <Route path="/sodoku">
+              <Sodoku />
             </Route>
           </Switch>
         </div>

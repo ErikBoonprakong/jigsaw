@@ -131,6 +131,8 @@ a:hover {
   align-items: center;
 }
 
+/* SLIDER PUZZLE */
+
 .slider-puzzle-table {
   border: 0.075em solid white;
 }
@@ -147,6 +149,50 @@ a:hover {
   text-shadow: -0.05em 0 black, 0 0.05em black, 0.05em 0 black, 0 -0.05em black;
   font-size: 1.5em;
   font-weight: 800;
+}
+
+/* SODOKU */
+.sodoku-board-container {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  justify-content: space-evenly;
+}
+
+.sodoku-table {
+  border-left: 0.2em solid white;
+  border-top: 0.2em solid white;
+}
+
+.sodoku-table tbody tr td {
+  background-color: rgba(27, 142, 243, 0.658);
+}
+.sodoku-table tbody tr:nth-child(odd) td:nth-child(even),
+.sodoku-table tbody tr:nth-child(even) td:nth-child(odd) {
+  background-color: rgba(50, 19, 250, 0.658);
+}
+
+.sodoku-cell {
+  color: white;
+  text-shadow: -0.01em 0 black, 0 0.01em black, 0.01em 0 black, 0 -0.01em black;
+  font-size: 1.25em;
+  font-weight: 600;
+  /* border-right: 0.075em solid white;
+  border-bottom: 0.075em solid white; */
+  width: 2.25vw;
+  height: 2.25vw;
+}
+
+.selected-cell {
+  background-color: aliceblue;
+}
+
+.right-box {
+  border-right: 0.2em solid white;
+}
+
+.bottom-box {
+  border-bottom: 0.2em solid white;
 }
 
 code {
