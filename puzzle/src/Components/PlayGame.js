@@ -301,7 +301,7 @@ class PlayGame extends React.Component {
       if (tempContents.join("") === "123456789101112131415 ") {
         console.log("yes");
         this.setState({
-          winMsg: "Congratulations for solving the puzzle! Enjoy the view!",
+          winMsg: "Congratulations for solving the puzzle!",
         });
         if (this.props.userData.user) {
           // add 200 to score
