@@ -52,8 +52,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[0] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[0])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[0])
                     }.jpg)`
                   : "none",
             }}
@@ -65,8 +65,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[1] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[1])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[1])
                     }.jpg)`
                   : "none",
             }}
@@ -87,8 +87,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[2] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[2])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[2])
                     }.jpg)`
                   : "none",
             }}
@@ -100,8 +100,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[3] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[3])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[3])
                     }.jpg)`
                   : "none",
             }}
@@ -115,8 +115,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[4] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[4])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[4])
                     }.jpg)`
                   : "none",
             }}
@@ -128,8 +128,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[5] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[5])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[5])
                     }.jpg)`
                   : "none",
             }}
@@ -141,8 +141,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[6] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[6])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[6])
                     }.jpg)`
                   : "none",
             }}
@@ -154,8 +154,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[7] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[7])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[7])
                     }.jpg)`
                   : "none",
             }}
@@ -169,8 +169,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[8] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[8])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[8])
                     }.jpg)`
                   : "none",
             }}
@@ -182,8 +182,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[9] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[9])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[9])
                     }.jpg)`
                   : "none",
             }}
@@ -195,8 +195,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[10] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[10])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[10])
                     }.jpg)`
                   : "none",
             }}
@@ -208,8 +208,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[11] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[11])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[11])
                     }.jpg)`
                   : "none",
             }}
@@ -223,8 +223,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[12] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[12])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[12])
                     }.jpg)`
                   : "none",
             }}
@@ -236,8 +236,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[13] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[13])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[13])
                     }.jpg)`
                   : "none",
             }}
@@ -249,8 +249,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[14] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[14])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[14])
                     }.jpg)`
                   : "none",
             }}
@@ -262,8 +262,8 @@ class PlayGame extends React.Component {
             style={{
               backgroundImage:
                 this.state.contents[15] !== " "
-                  ? `url(/backgroundErikOne/${
-                      17 - parseInt(this.state.contents[15])
+                  ? `url(/board-background/${
+                      parseInt(this.state.contents[15])
                     }.jpg)`
                   : "none",
             }}
