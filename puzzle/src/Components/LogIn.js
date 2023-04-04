@@ -51,6 +51,7 @@ class LogIn extends React.Component {
         ) : (
           <div>
             <h1>Log In</h1>
+            <p className="pre-text white-text">Not a member yet? <Link to="/createaccount">Sign up</Link>!</p>
             <form onSubmit={this.handleSubmit} className="register">
               <label for="username" className="input-label white-text">
                 Username

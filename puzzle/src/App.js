@@ -37,7 +37,7 @@ class App extends React.Component {
         <div className="App">
           <Switch>
             <Route exact path="/">
-              <Redirect to="/login" />
+              <Redirect to="/home" />
             </Route>
             <Route path="/home">
               <Home />
